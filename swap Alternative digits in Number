@@ -1,0 +1,29 @@
+
+
+#include <stdio.h>
+
+int main()
+{
+    long long int num,newnum;
+    scanf("%lld",&num);
+    int rem=0,rev;
+    while(num>0){
+        rem=num%10;
+        rev=rev*10+rem;
+        num=num/10;
+    }
+    while(rev>0){
+        rem=rev%100;
+        if(rem>9){
+            newnum=newnum*100+rem;
+        }
+        else{
+            newnum=newnum*10+rem;
+        }
+        rev=rev/100;
+    }
+    printf("%lld",newnum);
+
+    return 0;
+}
+
